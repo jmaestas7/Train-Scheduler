@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Train Scheduler</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <header class="jumbotron">
+    <h1>Amsterdam Local Scheduler</h1>
+    <h4>Local and Express Train schedules listed</h4>
+  </header>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col align-self-center">
+        <div class="panel panel-primary">
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Train Schedule</h3>
+          </div>
+
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th class="big">First Train</th>
+                  <th>Frequency(min)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+
+                </tr>
+              </thead>
+              <tbody id="trains">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add Train</h3>
+        </div>
+        <div class="panel-body">
+          <form id="form">
+            <div class="form-group">
+              <label for="exampleInputTrainName">Train Name</label>
+              <input type="text" class="form-control" id="exampleInputTrainName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputDestination">Destination</label>
+              <input type="text" class="form-control" id="exampleInputDestination">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputTrainTime">First Train Time (HH:mm - military time)</label>
+              <input type="time" class="form-control" id="exampleInputTrainTime">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputfrequency">Frequency (min) </label>
+              <input type="number" class="form-control" id="exampleInputTrainFrequency">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="assets/javascript/script.js"></script>
+
+</body>
+
+</html>
